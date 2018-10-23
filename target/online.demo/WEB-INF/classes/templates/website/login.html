@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+</head>
+<script>
+$(function(){
+	
+	$(".submit_button").on("click", function(){
+		console.log(" form submit start ..");
+		$.post("/login/confirm.html", $("#login_form").serialize(), function(result){
+		    if(result.isOK){
+		    	alert(result.message);
+		    }else{
+		    	alert("哎呀，"+result.message);
+		    }
+		  });
+	});
+})
+</script>
+<body>
+<form action="/login/confirm.html" method="post" id="login_form">
+
+用户：<input type="text" name="user_name">
+密码：<input type="password" name="ps">
+</form>
+<button class="submit_button">登录</button>
+</body>
+</html>
