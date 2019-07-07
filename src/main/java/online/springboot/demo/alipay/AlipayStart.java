@@ -22,7 +22,6 @@ public class AlipayStart {
 		request.setBizContent("{" +
 		"\"out_trade_no\":\"20150320010101001\"," +
 		"\"trade_no\":\"2014112611001004680 073956707\"," +
-		"\"org_pid\":\"2088101117952222\"" +
 		"  }");
 		AlipayTradeQueryResponse response = null;
 		try {
@@ -32,9 +31,9 @@ public class AlipayStart {
 			e.printStackTrace();
 		}
 		if(response.isSuccess()){
-		System.out.println("调用成功");
+		System.out.println("碌梅脫脙鲁脡鹿娄");
 		} else {
-		System.out.println("调用失败");
+		System.out.println("碌梅脫脙脢搂掳脺");
 		}
 	}
 }
